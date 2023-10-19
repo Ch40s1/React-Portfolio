@@ -5,21 +5,26 @@ function NavTabs() {
 
   return (
     <>
-      <ul className="nav nav-tabs">
-        <li className="nav-item">
-          <Link to="/" className={currentPage === '/' ? 'nav-link active' : 'nav-link disable'}>
-            Home
+      <div className='d-flex justify-content-around'>
+        <h1>Daniel</h1>
+        <ul className="nav">
+          {currentPage === '/' ? null : (
+            <li className="nav-item">
+              <Link to="/" className="nav-link">
+                Home
+              </Link>
+            </li>
+          )}
+          <li className="nav-item">
+            <Link to="/About" className={currentPage === '/About' ? 'nav-link active' : 'nav-link disable'}>
+              About me
+            </Link>
+          </li>
+          <Link to="/Portfolio" className={currentPage === '/Portfolio' ? 'nav-link active' : 'nav-link disable'}>
+            Portfolio
           </Link>
-        </li>
-        <li className="nav-item">
-          <Link to="/About" className={currentPage === '/About' ? 'nav-link active' : 'nav-link disable'}>
-            About me
-          </Link>
-        </li>
-        <Link to="/Portfolio" className={currentPage === '/Portfolio' ? 'nav-link active' : 'nav-link disable'}>
-          Portfolio
-        </Link>
-      </ul>
+        </ul>
+      </div>
     </>
   )
 }
