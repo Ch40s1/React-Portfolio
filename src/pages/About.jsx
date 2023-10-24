@@ -1,15 +1,35 @@
+const styles = {
+  imageStyle: {
+    height: '25rem',
+    width: "25rem",
+    borderRadius: '50%',
+    border: '3px solid #000',
+  },
+  containerStyle: {
+    marginTop: '10rem',
+  },
+  letterStyle: {
+    fontStyle: {
+      fontWeight: '900',
+      fontSize: '4rem',
+    }
+  }
+
+}
+
+
 export default function About() {
   return (
-    <div>
-      <h1>About Page</h1>
-      <p>
-        Nunc pharetra finibus est at efficitur. Praesent sed congue diam.
-        Integer gravida dui mauris, ut interdum nunc egestas sed. Aenean sed
-        mollis diam. Nunc aliquet risus ac finibus porta. Nam quis arcu non
-        lectus tincidunt fermentum. Suspendisse aliquet orci porta quam semper
-        imperdiet. Praesent euismod mi justo, faucibus scelerisque risus cursus
-        in. Sed rhoncus mollis diam, sit amet facilisis lectus blandit at.
-      </p>
+    <div style={styles.containerStyle} className='d-flex gap-5'>
+      <div>
+        <h1 style={styles.letterStyle.fontStyle}>Full-Stack-Developer</h1>
+        <p className=''>
+          I'm Daniel Zarate, a web developer based in the US. I create beautiful and functional websites.
+        </p>
+      </div>
+      <div>
+        <img src="src/img/TestAvatar.JPG" alt="My Self" style={styles.imageStyle} />
+      </div>
     </div>
   );
 }
