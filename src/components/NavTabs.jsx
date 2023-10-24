@@ -10,6 +10,7 @@ const styles = {
   backgroundStyle: {
     borderRadius: '20px',
     background: 'blue',
+    transition: 'background 1.3s ease',
     color: 'white',
   }
 }
