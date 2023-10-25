@@ -2,12 +2,6 @@ import '../style/modal.css';
 import '../style/imports.css';
 
 const styles = {
-  imageStyle: {
-    height: '25rem',
-    width: "25rem",
-    borderRadius: '50%',
-    border: '3px solid #000',
-  },
   containerStyle: {
     marginTop: '10rem',
   },
@@ -26,7 +20,7 @@ const styles = {
 
 }
 
-export default function Modal({closeModal}) {
+export default function Modal({closeModal, username}) {
   return (
     <>
       <div className="modalBackground">
@@ -35,7 +29,7 @@ export default function Modal({closeModal}) {
             <h2>Contact</h2>
           </div>
           <div className="modalBody" style={styles.letterStyle.paragraphStyle}>
-           <p> Thank you for submiting </p>
+           <p> Thank you {username} for submiting </p>
           </div>
           <div className="modalFooter" style={styles.letterStyle.paragraphStyle}>
             <button onClick={() => closeModal(false)}>Close</button>

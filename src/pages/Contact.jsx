@@ -3,7 +3,8 @@ import Modal from '../components/Modal';
 
 function Contact() {
   const [inputs, setInputs] = useState({});
-  const [openModal, setOpenModal] = useState(false)
+  const [openModal, setOpenModal] = useState(false);
+  const [username, setUsername] = useState('');
 
   const handleChange = (event) => {
     const name = event.target.name;
@@ -12,11 +13,14 @@ function Contact() {
   }
   const handleSubmit = (event) => {
     event.preventDefault();
+    const data = inputs.username;
+    setUsername(data)
+    setOpenModal(true)
   }
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
+      <form>
         <label> Name
           <input
             type='text'
@@ -26,11 +30,8 @@ function Contact() {
           />
         </label>
       </form>
-      <button onClick={ () =>
-        setOpenModal(true)
-      }>show modal
-      </button>
-   {openModal && <Modal closeModal={setOpenModal} />}
+      <button onClick={handleSubmit}> show modal </button>
+      {openModal && <Modal closeModal={setOpenModal} username={username}/>}
     </>
   )
 }
