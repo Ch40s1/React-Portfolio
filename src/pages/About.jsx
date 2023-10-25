@@ -28,7 +28,7 @@ const styles = {
 
 export default function About() {
   return (
-    <div style={styles.containerStyle} className='d-flex gap-5'>
+    <div style={styles.containerStyle} className='d-flex gap-5 justify-content-center'>
       <div>
         <h1 style={styles.letterStyle.fontStyle}>Full-Stack-Developer</h1>
         <p style={styles.letterStyle.paragraphStyle}>
