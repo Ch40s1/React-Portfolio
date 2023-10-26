@@ -1,22 +1,69 @@
 export default function Portfolio() {
+  const containerStyle = {
+    border: '1px solid #ccc',
+    padding: '10px',
+    textAlign: 'center',
+  };
+
+  const imageStyle = {
+    maxWidth: '100%',
+    transition: 'opacity 0.3s',
+  };
+
   return (
-    <div>
-      <h1>Portfolio Page</h1>
-      <p>
-        Donec a volutpat quam. Curabitur nec varius justo, sed rutrum ligula.
-        Curabitur pellentesque turpis sit amet eros iaculis, a mollis arcu
-        dictum. Ut vel ante eget massa ornare placerat. Etiam nisl orci, finibus
-        sodales volutpat et, hendrerit ut dolor. Suspendisse porta dictum nunc,
-        sed pretium risus rutrum eget. Nam consequat, ligula in faucibus
-        vestibulum, nisi justo laoreet risus, luctus luctus mi lacus sit amet
-        libero. Class aptent taciti sociosqu ad litora torquent per conubia
-        nostra, per inceptos himenaeos. Mauris pretium condimentum tellus eget
-        lobortis. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-        Donec placerat accumsan mi, ut congue neque placerat eu. Donec nec ipsum
-        in velit pellentesque vehicula sit amet at augue. Maecenas aliquam
-        bibendum congue. Pellentesque semper, lectus non ullamcorper iaculis,
-        est ligula suscipit velit, sed bibendum turpis dui in sapien.
-      </p>
+    <div style={containerStyle}>
+      <h1>Projects</h1>
+      <div className="container">
+        <div className="row">
+          <div className="col-md-6">
+            <div>
+              <a href='https://cybermart1-76e7c43ac326.herokuapp.com/' target="blank">
+                <img
+                  src="src/img/site.png"
+                  alt="Project 1"
+                  style={imageStyle}
+                  onMouseOver={(e) => (e.currentTarget.style.opacity = 0.8)}
+                  onMouseOut={(e) => (e.currentTarget.style.opacity = 1)} />
+              </a>
+              <h3>CyberMart: HTML, CSS, Express</h3>
+            </div>
+          </div>
+          <div className="col-md-6">
+            <div style={containerStyle}>
+              <a href='https://ch40s1.github.io/Weather-Application/' target="blank">
+                <img
+                  src="src/img/weatherapp.png"
+                  alt="Project 2"
+                  style={imageStyle}
+                  onMouseOver={(e) => (e.currentTarget.style.opacity = 0.8)}
+                  onMouseOut={(e) => (e.currentTarget.style.opacity = 1)} />
+              </a>
+              <h3>WeatherApp: HTML, CSS, Node</h3>
+            </div>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-md-6">
+            <div style={containerStyle}>
+              <a href='https://ch40s1.github.io/Cocktail-pedia/' target="blank">
+                <img src="src/img/cocktail.png"
+                  alt="Project 3"
+                  style={imageStyle}
+                  onMouseOver={(e) => (e.currentTarget.style.opacity = 0.8)}
+                  onMouseOut={(e) => (e.currentTarget.style.opacity = 1)} />
+              </a>
+              <h3>Cocktailpedia: HTML, CSS, Node</h3>
+            </div>
+          </div>
+          {/* <div className="col-md-6">
+            <div style={containerStyle}>
+              <img src="project4.jpg" alt="Project 4" style={imageStyle} onMouseOver={(e) => (e.currentTarget.style.opacity = 0.8)}
+                onMouseOut={(e) => (e.currentTarget.style.opacity = 1)}/>
+              <h3>Project 4 Name</h3>
+            </div>
+          </div> */}
+        </div>
+      </div>
     </div>
   );
 }

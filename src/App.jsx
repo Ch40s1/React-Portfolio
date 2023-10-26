@@ -5,7 +5,7 @@ import Footer from './components/Footer';
 const styles = {
   footerBarStyle : {
     position: 'absolute',
-    bottom: '0',
+    bottom: '-5rem',
     height: '7rem',
     display: 'flex',
     justifyContent: 'center',
@@ -18,15 +18,15 @@ const styles = {
 function App(){
   return (
     <>
-    <body className='min-vh-100'>
+    <body className='min-vh-90'>
       <NavTabs />
       <main className="mx-4">
         <Outlet />
       </main>
-      <footer style={styles.footerBarStyle} className='col-12'>
+    </body>
+    <footer style={styles.footerBarStyle} className='col-12 mt-5'>
       <Footer />
-      </footer>
-      </body>
+    </footer>
     </>
   )
 }

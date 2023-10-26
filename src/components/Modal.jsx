@@ -20,7 +20,7 @@ const styles = {
 
 }
 
-export default function Modal({closeModal, username}) {
+export default function Modal({closeModal, username, useremail, usertext}) {
   return (
     <>
       <div className="modalBackground">
