@@ -1,4 +1,5 @@
 import '../style/imports.css'
+import TestAvatar from '../img/TestAvatar.png'
 
 const styles = {
   imageStyle: {
@@ -36,7 +37,7 @@ export default function About() {
         </p>
       </div>
       <div>
-        <img src="src/img/TestAvatar.JPG" alt="My Self" style={styles.imageStyle} />
+        <img src={TestAvatar} alt="My Self" style={styles.imageStyle} />
       </div>
     </div>
   );
