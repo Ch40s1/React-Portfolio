@@ -16,6 +16,7 @@ const styles = {
 }
 
 function NavTabs() {
+  // sets what the pages should be in
   const currentPage = useLocation().pathname;
   const isAboutPage = currentPage === '/';
   const isPortfolioPage = currentPage === '/Portfolio';
@@ -23,10 +24,13 @@ function NavTabs() {
   const isResumePage = currentPage === '/Resume';
 
   return (
-    <div className={`d-flex justify-content-around pt-3 pb-2`} style={styles.navBarStyle}>
-      <h1>Daniel</h1>
+    // the way it works for all links
+    // if the current page is equal to the its corresponding page then the link becomes inactive
+    // so if the path is in /about then the link for /about is not active
+    <div className={`d-flex justify-content-around pt-3 pb-2 flex-wrap`} style={styles.navBarStyle}>
+      <h1 className=''>Daniel</h1>
       <ul className="nav">
-        <Link to="/" className={`nav-link ${isAboutPage ? 'active' : 'disable'}`} style={isAboutPage ? styles.backgroundStyle : null}>
+        <Link to="/" className={`nav-link ${isAboutPage ? 'active' : 'disable'} `} style={isAboutPage ? styles.backgroundStyle : null}>
           About Me
         </Link>
         <Link to="/Portfolio" className={`nav-link ${isPortfolioPage ? 'active' : 'disable'}`} style={isPortfolioPage ? styles.backgroundStyle : null}>

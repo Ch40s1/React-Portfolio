@@ -1,30 +1,19 @@
 import { Outlet } from 'react-router-dom';
 import NavTabs from "./components/NavTabs";
 import Footer from './components/Footer';
-
-const styles = {
-  footerBarStyle : {
-    position: 'absolute',
-    bottom: '-5rem',
-    height: '7rem',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    boxShadow: '0 0 10px rgba(0,0,0,.30)',
-  },
-
-}
+import "./style/imports.css"
 
 function App(){
   return (
     <>
+    {/* gets all the components that are needed for the page and puts in one compact app  */}
     <body className='min-vh-90'>
       <NavTabs />
       <main className="mx-4">
         <Outlet />
       </main>
     </body>
-    <footer style={styles.footerBarStyle} className='col-12 mt-5'>
+    <footer className='col-12 mt-5 d-flex justify-content-center'>
       <Footer />
     </footer>
     </>

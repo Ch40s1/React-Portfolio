@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+//gets app and all pages
 import App from './App.jsx';
 import About from './pages/About';
 import Portfolio from './pages/Portfolio.jsx';
@@ -18,18 +19,22 @@ const router = createBrowserRouter([
     // errorElement: <Error />,
     children: [
       {
+        // default page
         index:true,
         element: <About />,
       },
       {
+        // paths for portfolio
         path: '/Portfolio',
         element: <Portfolio />,
       },
       {
+        // path to contact page
         path: '/Contact',
         element: <Contact />,
       },
       {
+        //path to resume
         path: '/Resume',
         element: <Resume />,
       },

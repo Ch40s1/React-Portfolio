@@ -1,3 +1,4 @@
+// imports modal
 import '../style/modal.css';
 import '../style/imports.css';
 
@@ -20,6 +21,7 @@ const styles = {
 
 }
 
+// modal for when submittin the form. Takes in several props. Each carries over the data from the state
 export default function Modal({closeModal, username, useremail, usertext}) {
   return (
     <>
@@ -28,6 +30,7 @@ export default function Modal({closeModal, username, useremail, usertext}) {
           <div className="modalTitle" style={styles.letterStyle.fontStyle}>
             <h2>Contact</h2>
           </div>
+          {/* display the username  */}
           <div className="modalBody" style={styles.letterStyle.paragraphStyle}>
            <p> Thank you {username} for submiting </p>
           </div>

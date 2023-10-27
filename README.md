@@ -2,7 +2,7 @@
 I am Daniel Zarate and this is my portfolio made with REACT to showcase my work/progress as an upcomming programmer.
 
 ## Link
-https://ch40s1.github.io/My-Portfolio/
+website link : https://friendly-webdev.netlify.app/
 
 ## To view
 Click the link in the README to view.
@@ -20,6 +20,12 @@ View Portfolio or Conatct me 😄  <br />
 ## Credits
 MDN web docs:
 https://developer.mozilla.org/en-US/docs/Learn
+Vite docs:
+https://vitejs.dev/
+Boostrap 5 docs:
+https://getbootstrap.com/
+
+
 This website was used as reference.
 
 
@@ -27,4 +33,4 @@ This website was used as reference.
 MIT license
 
 ### Features
-Made with REACT and bootstrap
+Made with REACT, Bootstrap and Vite
